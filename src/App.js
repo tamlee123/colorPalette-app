@@ -18,11 +18,17 @@ class App extends Component {
       <Switch>
         <Route
           exact
-          path="/"
+          path="/palette/:paletteId/:colorId"
           render={(routeProps) => (
-            <PaletteList palettes={seedPalette} {...routeProps} />
+            <SingleColorPalette
+              colorId={routeProps.match.params.colorId}
+              palette={generatePalette(
+                this.findPalette(routeProps.match.params.paletteId)
+              )}
+            ></SingleColorPalette>
           )}
         ></Route>
+
         <Route
           exact
           path="/palette/:id"
@@ -36,8 +42,10 @@ class App extends Component {
         ></Route>
         <Route
           exact
-          path="/palette/:paletteId/:colorId"
-          render={() => <SingleColorPalette />}
+          path="/"
+          render={(routeProps) => (
+            <PaletteList palettes={seedPalette} {...routeProps} />
+          )}
         ></Route>
       </Switch>
       // <div>
