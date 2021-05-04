@@ -11,13 +11,16 @@ class App extends Component {
       return palette.id === id;
     });
   }
+  //using routeProps for history in PaletteList
   render() {
     return (
       <Switch>
         <Route
           exact
           path="/"
-          render={() => <PaletteList palettes={seedPalette} />}
+          render={(routeProps) => (
+            <PaletteList palettes={seedPalette} {...routeProps} />
+          )}
         ></Route>
         <Route
           excat
