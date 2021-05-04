@@ -23,7 +23,7 @@ class App extends Component {
           )}
         ></Route>
         <Route
-          excat
+          exact
           path="/palette/:id"
           render={(routeProps) => (
             <Palette
@@ -32,6 +32,11 @@ class App extends Component {
               )}
             ></Palette>
           )}
+        ></Route>
+        <Route
+          exact
+          path="/palette/:paletteId/:colorId"
+          render={() => <h1>Single Color Page</h1>}
         ></Route>
       </Switch>
       // <div>
