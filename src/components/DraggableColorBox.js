@@ -31,7 +31,7 @@ const styles = {
     justifyContent: "space-between",
   },
   deleteIcon: {
-    trtasition: "all 0.3s ease-in-out",
+    transition: "all 0.3s ease-in-out",
   },
 };
 const DraggableColorBox = SortableElement((props) => {
