@@ -1,15 +1,15 @@
 const styles = {
   root: {
     backgroundColor: "blue",
-    height: "100vh",
+    height: "100%",
     display: "flex",
-    alignItems: "flex-star",
+    alignItems: "flex-start",
     justifyContent: "center",
   },
   container: {
     width: "50%",
     display: "flex",
-    alignItems: "flex-star",
+    alignItems: "flex-start",
     flexDirection: "column",
     flexWrap: "wrap",
   },
@@ -17,8 +17,8 @@ const styles = {
     display: "flex",
     width: "100%",
     justifyContent: "space-between",
-    color: "white",
     alignItems: "center",
+    color: "white",
     "& a": {
       color: "white",
     },
@@ -28,7 +28,7 @@ const styles = {
     width: "100%",
     display: "grid",
     gridTemplateColumns: "repeat(3, 30%)",
-    gridGap: "5%",
+    gridGap: "2.5rem",
   },
 };
 export default styles;
