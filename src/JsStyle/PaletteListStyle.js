@@ -1,13 +1,19 @@
 import sizes from "./sizes";
-
+import background from "./background.svg";
 const styles = {
   root: {
-    backgroundColor: "blue",
     height: "100%",
     display: "flex",
     alignItems: "flex-start",
     justifyContent: "center",
     padding: "3rem",
+    /* background by SVGBackgrounds.com */
+    backgroundColor: "23bbee",
+    backgroundImage: `url(${background})`,
+    overflow: "scroll",
+  },
+  heading: {
+    fontSize: "2rem",
   },
   container: {
     width: "50%",
@@ -17,6 +23,9 @@ const styles = {
     flexWrap: "wrap",
     [sizes.down("xl")]: {
       width: "80%",
+    },
+    [sizes.down("xm")]: {
+      width: "70%",
     },
   },
   nav: {
@@ -40,7 +49,7 @@ const styles = {
     },
     [sizes.down("xs")]: {
       gridTemplateColumns: "repeat(1,100%)",
-      gridGap: "1rem",
+      gridGap: "1.4rem",
     },
   },
 };
