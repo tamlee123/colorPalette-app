@@ -10,8 +10,8 @@ import NewPaletteForm from "./components/NewPaletteForm";
 class App extends Component {
   constructor(props) {
     super(props);
-    const savePalettes = JSON.parse(window.localStorage.getItem("palettes"));
-    this.state = { palettes: savePalettes || seedPalette };
+    const savedPalettes = JSON.parse(window.localStorage.getItem("palettes"));
+    this.state = { palettes: savedPalettes || seedPalette };
     this.savePalette = this.savePalette.bind(this);
     this.findPalette = this.findPalette.bind(this);
     this.deletePalette = this.deletePalette.bind(this);

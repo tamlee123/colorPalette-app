@@ -12,6 +12,7 @@ import arrayMove from "array-move";
 import PaletteFormNav from "./PaletteFormNav";
 import ColorPickerForm from "./ColorPickerForm";
 import styles from "../JsStyle/NewPaletteFormStyle";
+import seedPalette from "../data/seedPalette";
 
 class NewPaletteForm extends Component {
   static defaultProps = {
@@ -21,8 +22,7 @@ class NewPaletteForm extends Component {
     super(props);
     this.state = {
       open: true,
-
-      colors: this.props.palettes[0].colors,
+      colors: seedPalette[0].colors,
     };
 
     this.handleChange = this.handleChange.bind(this);
